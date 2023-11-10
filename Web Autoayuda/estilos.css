@@ -1,6 +1,6 @@
 :root {
     --color-primario: #f3f3f3;
-    --color-secundario: #99ebe3;
+    --color-secundario: #c8e9c1;
     --tamano-p: 1.4em;
 }
 
@@ -10,7 +10,8 @@ html {
 }
 
 body {
-    width: auto;
+    max-width: 100%;
+    overflow-x: hidden;
     height: auto;
     margin: 0;
     background-color: #f3f3f3;
@@ -47,46 +48,47 @@ body {
     color: black;
 }
 
-/*
 @media (max-width: 600px) {
+    .header {
+        width: 100%;
+        padding: 0%;
+    }
     .menu {
+        width: 100%;
         flex-direction: column;
         align-items: center;
     }
 }
-*/
 
 /*Banner-Bienvenida*/
 
 .banner-bienvenida {
     width: 100%;
-    height: auto;
-}
-
-.banner-frase1 {
-    width: 100%;
-    height: auto;
-    background-color: var(--color-secundario);
+    height: 12rem;
+    background-color: #c8e9c1;
     text-align: end;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3rem;
 }
 
-.banner-frase1 h1 {
-    font-weight: bold;
+.container-banner-flex1 h1 {
     font-size: 30px;
-    position: relative;
-    z-index: 1;
 }
 
-.banner-frase1 p {
+.container-banner-flex1 p {
     font-size: larger;
 }
 
-.container-banner-flex {
-    position: relative;
-    z-index: 2;
+@media (max-width: 600px) {
+    .banner-bienvenida {
+        width: 100%;
+        height: auto;
+    }
+    .container-banner-flex {
+        width: 80%;
+    }
 }
 
 /*Section-Bienvenida*/
@@ -104,13 +106,13 @@ body {
     height: auto;
     width: 35rem;
 }
-/*
+
 @media (max-width: 600px) {
+    
     .container-bienvenida-autoayuda {
-        width: 100vh;
+        width: 80%;
     }
 }
-*/
 
 .container-bienvenida-autoayuda h2 {
     font-size: 1.7em;
@@ -168,14 +170,14 @@ body {
     font-size: var(--tamano-p);
     text-align: justify;
     margin-bottom: 3rem;
-    background-color: #c4ece8;
-    padding: 15px;
+    background-color: #d4eaf7;
+    padding: 20px;
     border-radius: 20px;
 }
 
 @media (max-width: 780px) {
     .section-libros-autoayuda .contenido-section-libros {
-        width: 100%;
+        width: 80%;
     }
 }
 
@@ -264,13 +266,13 @@ body {
     text-align: justify;
     margin-bottom: 3rem;
 }
-/*
+
 @media (max-width: 600px) {
     .section-articulos .contenido-section-articulos {
-        width: 90%;
+        width: 80%;
     }
 }
-*/
+
 .container-section-articulos {
     width: 70rem;
     height: auto;
@@ -279,13 +281,12 @@ body {
     justify-content: space-evenly;
 }
 
-/*
 @media (max-width: 600px) {
     .section-articulos .container-section-articulos {
         width: 100%;
     }
 }
-*/
+
 .container-section-articulos .container-articulo1 p {
     font-size: 1.4em;
     text-align: justify;
@@ -354,13 +355,13 @@ body {
     margin-bottom: 3rem;
     
 }
-/*
+
 @media (max-width: 600px) {
     .section-recursos .contenido-section-recursos {
-        width: 90%;
+        width: 80%;
     }
 }
-*/
+
 .container-section-recursos {
     width: 70rem;
     height: auto;
@@ -369,13 +370,13 @@ body {
     justify-content: space-evenly;
 
 }
-/*
+
 @media (max-width: 600px) {
     .section-recursos .container-section-recursos {
         width: 100%;
     }
 }
-*/
+
 .section-recursos .container-section-recursos .container-recurso1 {
     width: 20rem;
     height: 40rem;
@@ -429,14 +430,17 @@ body {
     text-align: justify;
     margin-bottom: 3rem;
 }
-/*
+
 @media (max-width: 600px) {
     .section-audiolibros .contenido-section-audiolibros {
-        width: 90%;
-        background-color: rebeccapurple;
+        width: 80%;
+        
+    }
+    .contenido-audiolibros {
+        width: 100%;
     }
 }
-*/
+
 .contenido-audiolibros {
     width: 100%;
     height: auto;
@@ -445,13 +449,6 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-/*
-@media (max-width: 600px) {
-    .contenido-audiolibros {
-        width: 100%;
-    }
-}
-*/
 
 .audiolibro-row {
     width: 70rem;
@@ -461,7 +458,7 @@ body {
     margin: 20px;
 
 }
-/*
+
 @media (max-width: 600px) {
     .audiolibro-row {
         flex-direction: column;
@@ -469,7 +466,7 @@ body {
         align-items: center;
     }
 }
-*/
+
 .contenido-audiolibros .audiolibro-row .audiolibro-portada {
     width: 25%;
     height: 85%;
@@ -492,13 +489,13 @@ body {
     width: 100%;
     height: 100%;
 }
-/*
+
 @media (max-width: 600px) {
     .contenido-audiolibros .audiolibro-row img {
         width: 18rem;
     }
 }
-*/
+
 .footer-audiolibros button {
     background-color: #98EDA4;
     padding: 8px 28px;
