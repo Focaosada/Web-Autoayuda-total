@@ -1,12 +1,14 @@
 :root {
     --color-primario: #f3f3f3;
     --color-secundario: #c8e9c1;
+    --color-contenido: #d4eaf7;
     --tamano-p: 1.4em;
+    --button-shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.2);
+    --button-transform-hover: translateY(-2px);
 }
 
 html {
    scroll-behavior: smooth;
-
 }
 
 body {
@@ -26,7 +28,7 @@ body {
 
 .menu {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     color: black;
 }
@@ -46,6 +48,13 @@ body {
 .lista li a {
     text-decoration: none;
     color: black;
+    cursor: pointer;
+    border-bottom: 2px solid transparent; /* Línea transparente por defecto */
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.lista li a:hover {
+    border-color: #3498db; /* Color de la línea al hacer hover */
 }
 
 @media (max-width: 600px) {
@@ -58,6 +67,11 @@ body {
         flex-direction: column;
         align-items: center;
     }
+}
+
+.menu img {
+    width: 3.5rem;
+    height: auto;
 }
 
 /*Banner-Bienvenida*/
@@ -81,13 +95,13 @@ body {
     font-size: larger;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 780px) {
     .banner-bienvenida {
         width: 100%;
         height: auto;
     }
     .container-banner-flex {
-        width: 80%;
+        width: 90%;
     }
 }
 
@@ -105,10 +119,12 @@ body {
 .container-bienvenida-autoayuda {
     height: auto;
     width: 35rem;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--color-contenido);
 }
 
 @media (max-width: 600px) {
-    
     .container-bienvenida-autoayuda {
         width: 80%;
     }
@@ -134,6 +150,12 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 3rem;
+}
+
+@media (max-width: 780px) {
+    .container-banner-flex2 {
+        width: 90%;
+    }
 }
 
 .container-banner-flex2 h1 {
@@ -170,7 +192,7 @@ body {
     font-size: var(--tamano-p);
     text-align: justify;
     margin-bottom: 3rem;
-    background-color: #d4eaf7;
+    background-color: var(--color-contenido);
     padding: 20px;
     border-radius: 20px;
 }
@@ -206,6 +228,7 @@ body {
     background-color: white;
     padding: 15px;
     margin-bottom: 3rem;
+    border-radius: 20px;
 }
 
 .container-tus-zonas-erroneas img {
@@ -236,9 +259,20 @@ body {
     letter-spacing: .02em;
     border: none;
     outline: none;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+ 
 }
 
-/*Porque hay margen entre cuerpo de card e imagen? Seguir hacia adelante y solucionar más tarde*/
+.container-tus-zonas-erroneas .footer button:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/*Estilar boton Jugar con estilos pregunta a chatgpt*/
+
+
+
 
 /*Section Articulos Autoayuda*/
 
@@ -265,6 +299,9 @@ body {
     font-size: var(--tamano-p);
     text-align: justify;
     margin-bottom: 3rem;
+    background-color: #d4eaf7;
+    padding: 20px;
+    border-radius: 20px;
 }
 
 @media (max-width: 600px) {
@@ -281,7 +318,7 @@ body {
     justify-content: space-evenly;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 780px) {
     .section-articulos .container-section-articulos {
         width: 100%;
     }
@@ -301,6 +338,7 @@ body {
     align-items: center;
     background-color: white;
     padding: 15px;
+    border-radius: 20px;
 }
 
 .container-articulo1 div {
@@ -325,6 +363,13 @@ body {
     letter-spacing: .02em;
     border: none;
     outline: none;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.container-articulo1 button:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
 
 /*Section Recursos Autoayuda*/
@@ -353,6 +398,9 @@ body {
     font-size: var(--tamano-p);
     text-align: justify;
     margin-bottom: 3rem;
+    background-color: var(--color-contenido);
+    padding: 20px;
+    border-radius: 20px;
     
 }
 
@@ -371,7 +419,7 @@ body {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 780px) {
     .section-recursos .container-section-recursos {
         width: 100%;
     }
@@ -386,6 +434,7 @@ body {
     align-items: center;
     background-color: white;
     padding: 15px;
+    border-radius: 20px;
 }
 
 .container-recurso1 p {
@@ -408,7 +457,14 @@ body {
     letter-spacing: .02em;
     border: none;
     outline: none;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
+.footer-recursos button:hover {
+    box-shadow: var(--button-shadow-hover);
+    transform: var(--button-transform-hover);
+}
+
 
 /*Section Audiolibros Autoayuda*/
 
@@ -416,6 +472,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 3rem;
 }
 
 .titulo-audiolibros {
@@ -429,9 +486,12 @@ body {
     font-size: var(--tamano-p);
     text-align: justify;
     margin-bottom: 3rem;
+    background-color: var(--color-contenido);
+    padding: 20px;
+    border-radius: 20px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 780px) {
     .section-audiolibros .contenido-section-audiolibros {
         width: 80%;
         
@@ -459,7 +519,7 @@ body {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 780px) {
     .audiolibro-row {
         flex-direction: column;
         justify-content: center;
@@ -476,9 +536,9 @@ body {
     width: 28rem;
     height: 100%;
     background-color: white;
-
     text-align: justify;
     padding: 15px;
+    border-radius: 20px;
 }
 
 .contenido-audiolibros .audiolibro-row .audiolibro-contenido p {
@@ -497,7 +557,7 @@ body {
 }
 
 .footer-audiolibros button {
-    background-color: #98EDA4;
+    background-color: var(--color-secundario);
     padding: 8px 28px;
     border-radius: 20px;
     line-height: 24px;
@@ -506,17 +566,15 @@ body {
     letter-spacing: .02em;
     border: none;
     outline: none;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-
+.footer-audiolibros button:hover {
+    box-shadow: var(--button-shadow-hover);
+    transform: var(--button-transform-hover);
+}
 
 /*Section Boletin*/
-
-.titulo-boletin {
-    text-align: center;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-}
 
 .contenido-boletin {
     background-color: var(--color-secundario);
@@ -533,7 +591,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 5px;
+    
 }
 
 .contenido-boletin .campo {
@@ -542,8 +600,7 @@ body {
 }
 
 .contenido-boletin .btn-sub {
-    background-color: #3280DB;
-
+    background-color: var(--color-contenido);
     line-height: 24px;
     font-size: 14px;
     font-weight: 600;
