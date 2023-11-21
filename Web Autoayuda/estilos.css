@@ -1,4 +1,4 @@
-:root {
+:root {  
     --color-primario: #f3f3f3;
     --color-secundario: #c8e9c1;
     --color-contenido: #d4eaf7;
@@ -26,57 +26,56 @@ body {
     padding: 10px;
 }
 
-.menu {
+.header__nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     color: black;
 }
 
-.lista {
+.nav__ul {
     display: flex;
     color: black;
 }
 
-.lista li {
+.li {
     margin-right: .9375rem;
     text-decoration: none;
     list-style-type: none;
     font-size: larger;
 }
 
-.lista li a {
+.a {
     text-decoration: none;
     color: black;
     cursor: pointer;
-    border-bottom: 2px solid transparent; /* Línea transparente por defecto */
+    border-bottom: 2px solid transparent; 
     transition: border-color 0.3s ease, color 0.3s ease;
 }
 
-.lista li a:hover {
-    border-color: #3498db; /* Color de la línea al hacer hover */
+.a:hover {
+    border-color: #3498db; 
 }
 
 @media (max-width: 600px) {
     .header {
         width: 100%;
-        padding: 0%;
     }
-    .menu {
+    .header__nav {
         width: 100%;
         flex-direction: column;
         align-items: center;
     }
 }
 
-.menu img {
+.header__nav img {
     width: 3.5rem;
     height: auto;
 }
 
 /*Banner-Bienvenida*/
 
-.banner-bienvenida {
+.banner-1 {
     width: 100%;
     height: 12rem;
     background-color: #cef2c7;
@@ -87,27 +86,32 @@ body {
     margin-bottom: 3rem;
 }
 
-.container-banner-flex1 h1 {
-    font-size: 30px;
+.banner-1__flex {
+    width: auto;
+    height: auto;
 }
 
-.container-banner-flex1 p {
+.banner-1__flex h1 {
+    font-size: 1.5em;
+}
+
+.banner-1__flex p {
     font-size: larger;
 }
 
 @media (max-width: 780px) {
-    .banner-bienvenida {
+    .banner-1 {
         width: 100%;
         height: auto;
     }
-    .container-banner-flex {
+    .banner-1__flex {
         width: 90%;
     }
 }
 
 /*Section-Bienvenida*/
 
-.section-bienvenida {
+.section-welcome {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,7 +120,7 @@ body {
     margin-bottom: 3rem;
 }
 
-.container-bienvenida-autoayuda {
+.section-welcome__container {
     height: auto;
     width: 35rem;
     padding: 20px;
@@ -125,23 +129,23 @@ body {
 }
 
 @media (max-width: 600px) {
-    .container-bienvenida-autoayuda {
+    .section-welcome__container {
         width: 80%;
     }
 }
 
-.container-bienvenida-autoayuda h2 {
+.section-welcome__container h2 {
     font-size: 1.7em;
 }
 
-.container-bienvenida-autoayuda p {
+.section-welcome__container p {
     font-size: 1.5em;
     text-align: justify;
 }
 
 /*Banner 2*/
 
-.banner-frase2 {
+.banner-2 {
     width: 100%;
     height: 192px;
     background-color: var(--color-secundario);
@@ -153,22 +157,22 @@ body {
 }
 
 @media (max-width: 780px) {
-    .container-banner-flex2 {
+    .banner-2__flex {
         width: 90%;
     }
 }
 
-.container-banner-flex2 h1 {
-    font-size: 30px;
+.banner-2__flex h1 {
+    font-size: 1.5em;
 }
 
-.container-banner-flex2 p {
+.banner-2__flex p {
     font-size: larger;
 }
 
 /*Section Libros de Autoayuda*/
 
-.section-libros-autoayuda {
+.section-books {
     width: 100%;
     height: auto;
     display: flex;
@@ -178,15 +182,14 @@ body {
     background-color: var(--color-primario);
 }
 
-.section-libros-autoayuda .titulo-libros h1 {
+.title-container__h1 {
     font-weight: bold;
-    font-size: 2em;
+    font-size: 30px;
     margin-bottom: 3rem;
     margin-top: 3rem;
 }
 
-
-.section-libros-autoayuda .contenido-section-libros {
+.section-books__content {
     height: auto;
     width: 35rem;
     font-size: var(--tamano-p);
@@ -198,12 +201,12 @@ body {
 }
 
 @media (max-width: 780px) {
-    .section-libros-autoayuda .contenido-section-libros {
+    .section-books__content {
         width: 80%;
     }
 }
 
-.section-libros-autoayuda .container-section {
+.container-cards {
     width: 70rem;
     height: auto;
     display: flex;
@@ -213,12 +216,12 @@ body {
 }
 
 @media (max-width: 780px) {
-    .section-libros-autoayuda .container-section  {
+    .container-cards  {
         width: 100%;
     }
 }
 
-.section-libros-autoayuda .container-section .container-tus-zonas-erroneas {
+.container-cards__card {
     width: 20rem;
     height: 70rem;
     display: flex;
@@ -231,12 +234,12 @@ body {
     border-radius: 20px;
 }
 
-.container-tus-zonas-erroneas img {
+.container-cards__card img {
     width: 20rem;
     height: 28rem;
 }
 
-.container-tus-zonas-erroneas .contenido-card {
+.container-cards__card-content {
     width: auto;
     height: 45rem;
     margin-top: 0px;
@@ -244,39 +247,35 @@ body {
     flex-shrink: 1;
 }
 
-.container-tus-zonas-erroneas .contenido-card p {
+.container-cards__card-content p {
     font-size: 1.4em;
     text-align: justify;
 }
 
-.container-tus-zonas-erroneas .footer button {
+.btn-common {
     background-color: var(--color-secundario);
     padding: 8px 28px;
     border-radius: 20px;
     line-height: 24px;
-    font-size: 14px; 
-    font-weight: 600;
+    font-size:16px; 
+    font-weight: bolder;
     letter-spacing: .02em;
     border: none;
     outline: none;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     cursor: pointer;
- 
+    text-decoration: none;
+    color: black;
 }
 
-.container-tus-zonas-erroneas .footer button:hover {
+.btn-common:hover {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
+    transform: translateY(-2px)
 }
-
-/*Estilar boton Jugar con estilos pregunta a chatgpt*/
-
-
-
 
 /*Section Articulos Autoayuda*/
 
-.section-articulos {
+.section-articles {
     width: 100%;
     height: auto;
     display: flex;
@@ -284,7 +283,7 @@ body {
     align-items: center;
 }
 
-.section-articulos .titulo-articulos h1 {
+.title-container__h1-articles {
     height: auto;
     width: 100%;
     font-weight: bold;
@@ -293,7 +292,7 @@ body {
     
 }
 
-.section-articulos .contenido-section-articulos {
+.section-articles__content {
     height: auto;
     width: 35rem;
     font-size: var(--tamano-p);
@@ -305,12 +304,12 @@ body {
 }
 
 @media (max-width: 600px) {
-    .section-articulos .contenido-section-articulos {
+    .section-articles__content {
         width: 80%;
     }
 }
 
-.container-section-articulos {
+.container-articles {
     width: 70rem;
     height: auto;
     display: flex;
@@ -319,17 +318,12 @@ body {
 }
 
 @media (max-width: 780px) {
-    .section-articulos .container-section-articulos {
+    .container-articles {
         width: 100%;
     }
 }
 
-.container-section-articulos .container-articulo1 p {
-    font-size: 1.4em;
-    text-align: justify;
-}
-
-.section-articulos .container-section-articulos .container-articulo1 {
+.container-articles__article {
     width: 20rem;
     height: auto;
     margin-bottom: 5rem;
@@ -341,58 +335,41 @@ body {
     border-radius: 20px;
 }
 
-.container-articulo1 div {
+.container-articles__article-content {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
-.container-articulo1 img {
+.container-articles__article p {
+    font-size: 1.4em;
+    text-align: justify;
+}
+
+.container-articles__article img {
     width: 320px;
     aspect-ratio: 2/1.5;
-}
-
-.container-articulo1 button {
-    margin-bottom: 32px;
-    background-color: #98EBC7;
-    padding: 8px 28px;
-    border-radius: 20px;
-    line-height: 24px;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: .02em;
-    border: none;
-    outline: none;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    cursor: pointer;
-}
-
-.container-articulo1 button:hover {
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
+    margin-top: 2rem;
 }
 
 /*Section Recursos Autoayuda*/
 
-/*Div contenedor de iframe con dimensiones mas grande y poder alinear el contenido al final, se ha quitado ahora, puede ser por el tamaño del contenedor padre*/
-
-.section-recursos .titulo-recursos h1 {
-
-    height: auto;
-    width: 100%;
-    margin-bottom: 3rem;
-}
-
-.section-recursos {
+.section-resources {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
-.section-recursos .contenido-section-recursos {
+.title-container__h1-resources {
+    height: auto;
+    width: 100%;
+    margin-bottom: 3rem;
+    font-size: 30px;
+}
+
+.section-resources__content {
     height: auto;
     width: 35rem;
     font-size: var(--tamano-p);
@@ -401,31 +378,29 @@ body {
     background-color: var(--color-contenido);
     padding: 20px;
     border-radius: 20px;
-    
 }
 
 @media (max-width: 600px) {
-    .section-recursos .contenido-section-recursos {
+    .section-resources__content {
         width: 80%;
     }
 }
 
-.container-section-recursos {
+.container-resources {
     width: 70rem;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-
 }
 
 @media (max-width: 780px) {
-    .section-recursos .container-section-recursos {
+    .container-resources {
         width: 100%;
     }
 }
 
-.section-recursos .container-section-recursos .container-recurso1 {
+.container-resources__resource {
     width: 20rem;
     height: 40rem;
     margin-bottom: 5rem;
@@ -437,34 +412,20 @@ body {
     border-radius: 20px;
 }
 
-.container-recurso1 p {
+.container-resources__resource p {
     font-size: var(--tamano-p);
     text-align: justify;
 }
 
-.contenido-recurso {
+.container-resource__resource-content {
     width: auto;
     flex-grow: 1;
 }
 
-.footer-recursos button {
-    background-color: #8BBEEB;
-    padding: 8px 28px;
-    border-radius: 20px;
-    line-height: 24px;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: .02em;
-    border: none;
-    outline: none;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+.container-resources__resource iframe {
+    border-radius:  15px;
+    border: 0;
 }
-
-.footer-recursos button:hover {
-    box-shadow: var(--button-shadow-hover);
-    transform: var(--button-transform-hover);
-}
-
 
 /*Section Audiolibros Autoayuda*/
 
@@ -556,22 +517,25 @@ body {
     }
 }
 
-.footer-audiolibros button {
+.audiolibro-row .audiolibro-contenido .btn-2 {
     background-color: var(--color-secundario);
     padding: 8px 28px;
     border-radius: 20px;
     line-height: 24px;
-    font-size: 14px;
-    font-weight: 600;
+    font-size:16px; 
+    font-weight: bolder;
     letter-spacing: .02em;
     border: none;
     outline: none;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
-.footer-audiolibros button:hover {
-    box-shadow: var(--button-shadow-hover);
-    transform: var(--button-transform-hover);
+.audiolibro-row .audiolibro-contenido .btn-2:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px)
 }
 
 /*Section Boletin*/
