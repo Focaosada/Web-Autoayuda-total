@@ -204,6 +204,9 @@ body {
     .section-books__content {
         width: 80%;
     }
+    .section-books__title-container {
+        text-align: center;
+    }
 }
 
 .container-cards {
@@ -307,6 +310,11 @@ body {
     .section-articles__content {
         width: 80%;
     }
+
+    .title-container__h1-articles {
+        text-align: center;
+    }
+
 }
 
 .container-articles {
@@ -384,6 +392,10 @@ body {
     .section-resources__content {
         width: 80%;
     }
+    .title-container__h1-resources {
+        text-align: center;
+    }
+    
 }
 
 .container-resources {
@@ -429,19 +441,19 @@ body {
 
 /*Section Audiolibros Autoayuda*/
 
-.section-audiolibros {
+.section-audio-books {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 3rem;
 }
 
-.titulo-audiolibros {
+.title-container__h1-audio-books {
     text-align: center;
     margin-bottom: 3rem;
 }
 
-.section-audiolibros .contenido-section-audiolibros {
+.section-audio-books__content {
     height: auto;
     width: 35rem;
     font-size: var(--tamano-p);
@@ -453,16 +465,31 @@ body {
 }
 
 @media (max-width: 780px) {
-    .section-audiolibros .contenido-section-audiolibros {
-        width: 80%;
-        
+
+    .title-container__h1-audio-books {
+        text-align: center;
     }
-    .contenido-audiolibros {
-        width: 100%;
+
+    .section-audio-books__content {
+        width: 80%;
+    }
+
+    .container-audio-books__audio-book {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .audio-book__content {
+        width: 80%;
+    }
+
+    .img__audio-book {
+        width: 18rem;
     }
 }
 
-.contenido-audiolibros {
+.container-audio-books {
     width: 100%;
     height: auto;
     display: flex;
@@ -471,53 +498,39 @@ body {
     justify-content: space-between;
 }
 
-.audiolibro-row {
-    width: 70rem;
+.container-audio-books__audio-book {
+    width: 62.5rem;
     height: auto;
     display: flex;
     justify-content: space-evenly;
     margin: 20px;
-
 }
 
-@media (max-width: 780px) {
-    .audiolibro-row {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+.img__audio-book {
+    width: 15rem;
+    height: 15rem;
 }
 
-.contenido-audiolibros .audiolibro-row .audiolibro-portada {
-    width: 25%;
-    height: 85%;
-}
-
-.contenido-audiolibros .audiolibro-row .audiolibro-contenido {
+.audio-book__content {
     width: 28rem;
     height: 100%;
     background-color: white;
-    text-align: justify;
     padding: 15px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.contenido-audiolibros .audiolibro-row .audiolibro-contenido p {
+.content__h1 {
+    text-align: start;
+}
+
+.audio-book__content p {
     font-size: var(--tamano-p);
 }
 
-.contenido-audiolibros .audiolibro-row img {
-    width: 100%;
-    height: 100%;
-}
-
-@media (max-width: 600px) {
-    .contenido-audiolibros .audiolibro-row img {
-        width: 18rem;
-    }
-}
-
-.audiolibro-row .audiolibro-contenido .btn-2 {
+.btn-common--audio-book {
     background-color: var(--color-secundario);
     padding: 8px 28px;
     border-radius: 20px;
@@ -531,9 +544,11 @@ body {
     cursor: pointer;
     text-decoration: none;
     color: black;
+    width: 40%;
+    text-align: center;
 }
 
-.audiolibro-row .audiolibro-contenido .btn-2:hover {
+.btn-common--audio-book:hover {
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px)
 }
@@ -558,12 +573,12 @@ body {
     
 }
 
-.contenido-boletin .campo {
+.campo {
     padding: 10px 30px;
     border: solid black 0.5px;
 }
 
-.contenido-boletin .btn-sub {
+.btn-sub {
     background-color: var(--color-contenido);
     line-height: 24px;
     font-size: 14px;
